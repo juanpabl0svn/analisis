@@ -7,6 +7,6 @@ def crearMatriz(n,matriz = []):#O(n**2)
 def Mostrar(matriz):  #O(n)
   [print(x) for x in matriz]
 def sumaTotal(lista,suma=0): #O(n) 
-  for i in lista: suma+=+sum(i)
+  for i in lista: suma+=sum(i)
   return suma
 crearMatriz(4)[0]
