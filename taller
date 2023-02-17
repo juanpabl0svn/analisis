@@ -1,0 +1,52 @@
+#Primer punto
+def punto_uno(fila,columnas): # = O(n**2)
+  matriz = []
+  for i in range(fila):  #O(n)
+    matriz.append([])
+    [matriz[i].append((i,j)) for j in range(columnas)]  
+  for a in matriz:  #O(n)
+    print(a)
+  for variable_columna in range(columnas):  #O(n**2)
+    if variable_columna%2==0:
+      for i in range(fila):
+        print(matriz[i][variable_columna])
+    else:
+      for j in range(fila-1,-1,-1):
+        print(matriz[j][variable_columna])
+#Ejecutar primer punto
+punto_uno(3,3)
+
+#Segundo punto
+#...
+#Ejecutar segundo punto
+
+
+
+
+
+
+
+#Primer punto recursivo
+import random 
+def crearMatriz(fila,columna,matriz = []):
+  for i in range(fila): 
+    matriz.append([])
+    [matriz[i].append((i,j)) for j in range(columna)]  
+  return matriz
+def punto_uno_recursivo(matriz,variable_colulmna=0,fila=0):
+  if variable_colulmna == len(matriz[0]):
+    return
+  print(matriz[fila][variable_colulmna])
+  if variable_colulmna%2 == 0:
+    if fila+1 == len(matriz):
+      return punto_uno_recursivo(matriz,variable_colulmna+1,fila)
+    return punto_uno_recursivo(matriz,variable_colulmna,fila+1)
+  else:
+    if fila == 0:
+      return punto_uno_recursivo(matriz,variable_colulmna+1,fila)
+    return punto_uno_recursivo(matriz,variable_colulmna,fila-1)
+#Ejecutar primer punto recursivo
+matriz = crearMatriz(2,3)
+for i in matriz:
+  print(i)
+punto_uno_recursivo(matriz)
