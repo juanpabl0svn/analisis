@@ -1,4 +1,5 @@
-def potencia_recursivo(numero,potencia):    #O(n^n)
+#PUNTO 2
+def potencia_recursivo(numero,potencia):    #  = O(n^n)
   if potencia == 0:
     return 1
   if potencia == 1:
@@ -19,3 +20,15 @@ def potencia_no_recursivo(numero,potencia):      # =  O(n)
 
 potencia_no_recursivo(3,3)
 potencia_recursivo(3,3)
+
+#PUNTO 3
+def factorial(numero):    #  = O(n)
+  resultado = 1
+  for i in range(1,numero+1):
+    resultado*=i
+  return resultado
+
+def permutaciones(m):     # = O(n)
+  return factorial(m)
+
+permutaciones(5)
