@@ -1,15 +1,22 @@
 def DupAdd(numero):
   suma = 0
-  for i in range(0,numero):
-    if suma == numero:
-      return i+1
-    if suma * 2 <= numero:
-      suma*=2
-    if suma + 1 <= numero:
-      suma+=1
+  if numero %2:
+    suma+=1
+    for i in range(1,numero):
+      if suma == numero:
+        return i
+  else:
+    for i in range(numero):
+      if suma == numero:
+        return i+1
+      if suma * 2 <= numero:
+        suma*=2
+      if suma + 1 <= numero:
+        suma+=1
   return numero
-
 dupAdd(8)
+
+
 
 def difAbs(lista1,lista2):
   dif = 0
