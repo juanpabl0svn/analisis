@@ -9,7 +9,7 @@ def DupAdd(numero):
       suma+=1
   return numero
 
-DupAdd(7)
+DupAdd(8)
 
 def difAbs(lista1,lista2):
   dif = 0
