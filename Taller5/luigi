@@ -1,0 +1,31 @@
+def mul(n,resultado=1,num=1):  
+    for i in range(n):
+        print(i,resultado)
+        num += 1
+        if resultado*2 < n:
+            resultado*=2
+        elif resultado*2 == n:
+            resultado*=2
+            break
+        elif resultado+1 == n:
+            resultado +=1 
+            break
+        else:    
+            resultado +=1 
+    return num    
+       
+   
+# print(mul(5))
+
+a=[4,1,8,7]
+b=[2,3,6,5]
+def punto2(a=[],b=[],suma=0):
+    a=sorted(a)
+    b=sorted(b)
+    print(a,b)
+    for i in range(len(a)):
+        suma += abs(a[i]-b[i])
+    return(suma)  
+
+
+print(punto2(a,b))
