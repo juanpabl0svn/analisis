@@ -1,22 +1,12 @@
 def DupAdd(numero):
-  suma = 0
-  if numero %2 == 0:
-    suma+=1
-    for i in range(1,numero):
-      if suma == numero:
-        return i
+  suma = 1
+  for i in range(1,numero+1):
+    if suma == numero:
+      return i
+    if suma * 2 <= numero:
       suma*=2
-  else:
-    pasos = 0
-    for i in range(numero):
-      if suma == numero:
-        return pasos
-      if suma + 1 <= numero:
-        suma+=1
-        pasos+=1
-      if suma * 2 <= numero:
-        suma*=2
-        pasos+=1
+    else:
+      suma+=1
   return numero
 
 DupAdd(7)
