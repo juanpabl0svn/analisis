@@ -9,18 +9,15 @@ def DupAdd(numero):
       suma*=2
   else:
     for i in range(numero):
+      print(suma)
       if suma == numero:
         return i
-      if suma * 2 <= numero:
-        suma*=2
       if suma + 1 <= numero:
         suma+=1
+      if suma * 2 <= numero:
+        suma*=2
   return numero
-
-
 DupAdd(8)
-
-
 
 def difAbs(lista1,lista2):
   dif = 0
