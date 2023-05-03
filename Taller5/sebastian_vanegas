@@ -1,0 +1,29 @@
+import numpy as np
+
+def taller(A,B,suma=0,valor=0):
+    if not A:
+        return suma
+    else:
+        valor=np.abs(min(A)-min(B))
+        suma = suma + valor
+        A.remove(min(A))
+        B.remove(min(B))
+        return taller(A,B,suma,valor)
+
+
+A=[4,1,2]
+B=[2,4,1]
+taller(A,B)
+
+def taller2(N,veces=0):
+    if N == 0:
+        return veces
+    else:
+        if N%2==0:
+            N=N/2
+        else:
+            N-=1
+        veces+=1
+        return taller2(N,veces)
+       
+taller2(8)
