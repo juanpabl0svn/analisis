@@ -1,20 +1,24 @@
 def DupAdd(numero):
   suma = 0
-  if numero %2:
+
+  if numero %2 == 0:
     suma+=1
     for i in range(1,numero):
       if suma == numero:
         return i
+      suma*=2
   else:
     for i in range(numero):
       if suma == numero:
-        return i+1
+        return i
       if suma * 2 <= numero:
         suma*=2
       if suma + 1 <= numero:
         suma+=1
   return numero
-dupAdd(8)
+
+
+DupAdd(8)
 
 
 
