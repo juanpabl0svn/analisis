@@ -1,6 +1,5 @@
 def DupAdd(numero):
   suma = 0
-
   if numero %2 == 0:
     suma+=1
     for i in range(1,numero):
@@ -8,16 +7,19 @@ def DupAdd(numero):
         return i
       suma*=2
   else:
+    pasos = 0
     for i in range(numero):
-      print(suma)
       if suma == numero:
-        return i
+        return pasos
       if suma + 1 <= numero:
         suma+=1
+        pasos+=1
       if suma * 2 <= numero:
         suma*=2
+        pasos+=1
   return numero
-DupAdd(8)
+
+DupAdd(7)
 
 def difAbs(lista1,lista2):
   dif = 0
